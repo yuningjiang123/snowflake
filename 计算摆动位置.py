@@ -10,4 +10,4 @@ for i in range(0,frame+1):
     f = i * 5    #关键帧位置0%~100%
     s = math.sin(2 * math.pi * i / frame) * theta   #每步摆动的角度(公转角度)
     r = 360 * i / frame  #每步自传的角度
-    print("%.0f%%{-webkit-transform: rotate(%.1fdeg) translateY(100px) rotate(%.1fdeg);}"%(f, s, r))
+    print("%.0f%%{\n  -webkit-transform: rotate(%.1fdeg) translateY(100px) rotate(%.1fdeg);\n  -ms-transform: rotate(%.1fdeg) translateY(100px) rotate(%.1fdeg);\n}"%(f, s, r, s, r))
