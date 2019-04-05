@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>Rotating Disney</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			width:100%;
+			height:100vh;
+			overflow: hidden;
+		}
+		.snow{
+			position:absolute;
+			width:100%;
+			height:100vh;
+			background: linear-gradient(black 80%, white 100%)
+		}
+		@keyframes spin{           
+			0%{-webkit-transform: rotate(0.0deg) translateY(100px) rotate(0.0deg);}
+			5%{-webkit-transform: rotate(18.5deg) translateY(100px) rotate(18.0deg);}
+			10%{-webkit-transform: rotate(35.3deg) translateY(100px) rotate(36.0deg);}
+			15%{-webkit-transform: rotate(48.5deg) translateY(100px) rotate(54.0deg);}
+			20%{-webkit-transform: rotate(57.1deg) translateY(100px) rotate(72.0deg);}
+			25%{-webkit-transform: rotate(60.0deg) translateY(100px) rotate(90.0deg);}
+			30%{-webkit-transform: rotate(57.1deg) translateY(100px) rotate(108.0deg);}
+			35%{-webkit-transform: rotate(48.5deg) translateY(100px) rotate(126.0deg);}
+			40%{-webkit-transform: rotate(35.3deg) translateY(100px) rotate(144.0deg);}
+			45%{-webkit-transform: rotate(18.5deg) translateY(100px) rotate(162.0deg);}
+			50%{-webkit-transform: rotate(0.0deg) translateY(100px) rotate(180.0deg);}
+			55%{-webkit-transform: rotate(-18.5deg) translateY(100px) rotate(198.0deg);}
+			60%{-webkit-transform: rotate(-35.3deg) translateY(100px) rotate(216.0deg);}
+			65%{-webkit-transform: rotate(-48.5deg) translateY(100px) rotate(234.0deg);}
+			70%{-webkit-transform: rotate(-57.1deg) translateY(100px) rotate(252.0deg);}
+			75%{-webkit-transform: rotate(-60.0deg) translateY(100px) rotate(270.0deg);}
+			80%{-webkit-transform: rotate(-57.1deg) translateY(100px) rotate(288.0deg);}
+			85%{-webkit-transform: rotate(-48.5deg) translateY(100px) rotate(306.0deg);}
+			90%{-webkit-transform: rotate(-35.3deg) translateY(100px) rotate(324.0deg);}
+			95%{-webkit-transform: rotate(-18.5deg) translateY(100px) rotate(342.0deg);}
+			100%{-webkit-transform: rotate(-0.0deg) translateY(100px) rotate(360.0deg);}
+		}
+	</style>
+	<script>
+		var audio = new Audio('I_wish.mp3');
+		audio.play();
+		audio.addEventListener("ended", function() {
+			audio.play();
+		});
+		document.addEventListener("touchmove",function(e){
+			e.preventDefault();
+		},false);//禁止页面滑动
+	</script>
+</head>
+<body>
+	<div class="snow"></div>
+	
+	<script src="snow.js"></script>
+</body>
+</html>
